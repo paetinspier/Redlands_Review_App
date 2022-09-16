@@ -1,6 +1,7 @@
 package com.example.android_team_project.controllers;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -24,40 +25,47 @@ public class MainActivity extends AppCompatActivity {
         selectedCategory = "";
 
     }
-    public void barsOption(View view){
-      selectedCategory = "allBars";
-      Intent launchReport = new Intent(this, SearchPageActivity.class);
-      launchReport.putExtra("category", selectedCategory);
-      startActivity(launchReport);
+
+    public void barsOption(View view) {
+        selectedCategory = "allBars";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
-    public void fitnessOption(View view){
+
+    public void fitnessOption(View view) {
         selectedCategory = "allGym";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
-    public void entertainmentOption(View view){
+
+    public void entertainmentOption(View view) {
         selectedCategory = "allEntertainment";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
-    public void foodOption(View view){
+
+    public void foodOption(View view) {
         selectedCategory = "allFood";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
-    public void hotelOption(View view){
+
+    public void hotelOption(View view) {
         selectedCategory = "allHotels";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
-    public void beautyOption(View view){
+
+    public void beautyOption(View view) {
         selectedCategory = "allBeauty";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
+
 }

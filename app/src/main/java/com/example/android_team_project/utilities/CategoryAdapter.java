@@ -22,8 +22,8 @@ public class CategoryAdapter extends ArrayAdapter<Location> {
         Location currentBusiness = getItem(position);
 
         View business = convertView;
-        if( business == null){
-            business = LayoutInflater.from(getContext()).inflate(R.layout.search_item,parent, false);
+        if (business == null) {
+            business = LayoutInflater.from(getContext()).inflate(R.layout.search_item, parent, false);
         }
 
         TextView business_name = business.findViewById(R.id.search_business_name);

@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import com.example.android_team_project.R;
 import com.example.android_team_project.models.Comment;
+
 import java.util.ArrayList;
 
 public class CommentAdapter extends ArrayAdapter<Comment> {
@@ -21,8 +23,8 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
         Comment currentComment = getItem(position);
 
         View comment = convertView;
-        if(comment == null){
-            comment = LayoutInflater.from(getContext()).inflate(R.layout.results_comments,parent, false);
+        if (comment == null) {
+            comment = LayoutInflater.from(getContext()).inflate(R.layout.results_comments, parent, false);
         }
 
         TextView priceTitle = comment.findViewById(R.id.titleTxtV);

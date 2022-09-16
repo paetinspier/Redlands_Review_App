@@ -42,7 +42,7 @@ public class ResultPageActivity extends Activity {
     private String name;
 
     @Override
-    public void onCreate (Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.results_page);
 
@@ -81,7 +81,7 @@ public class ResultPageActivity extends Activity {
 
     }
 
-    public void getImage (){
+    public void getImage() {
         new Thread() { // retrieving the image on another thread
             public void run() {
                 try {
@@ -90,7 +90,7 @@ public class ResultPageActivity extends Activity {
                     InputStream inputStream = null;
                     URL url = new URL(imgURL);
                     URLConnection urlConn = url.openConnection();
-                    HttpURLConnection httpConnection = (HttpURLConnection)  urlConn;
+                    HttpURLConnection httpConnection = (HttpURLConnection) urlConn;
                     httpConnection.setRequestMethod("GET");
                     httpConnection.connect();
                     inputStream = httpConnection.getInputStream();
@@ -106,8 +106,7 @@ public class ResultPageActivity extends Activity {
                     mHandler.sendMessage(msg);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
-                }
-                catch (IOException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
@@ -116,14 +115,14 @@ public class ResultPageActivity extends Activity {
     }
 
     private Handler mHandler = new Handler() {
-        public void handleMessage (Message msg){
+        public void handleMessage(Message msg) {
             imageView.setImageBitmap((Bitmap) (msg.getData().getParcelable("bitmap")));
         }
     };
 
-    public void mapOption(View view){
+    public void mapOption(View view) {
         //Uri gmmIntentUri = Uri.parse("geo:"+location+"10");
-        Uri gmmIntentUri = Uri.parse("geo:"+location+"?q="+name);
+        Uri gmmIntentUri = Uri.parse("geo:" + location + "?q=" + name);
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);

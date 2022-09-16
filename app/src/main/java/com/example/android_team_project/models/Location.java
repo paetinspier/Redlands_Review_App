@@ -10,7 +10,7 @@ public class Location {
     private String review;
     private String imageURL;
 
-    public Location () {
+    public Location() {
         name = "name";
         desc = "desc";
         price = "$";
@@ -19,7 +19,7 @@ public class Location {
         imageURL = "";
     }
 
-    public Location (String name, String desc, String address, String price, String review, String imageURL){
+    public Location(String name, String desc, String address, String price, String review, String imageURL) {
         this.name = name;
         this.desc = desc;
         this.price = price;
@@ -59,6 +59,7 @@ public class Location {
     public void setReview(String review) {
         this.review = review;
     }
+
     public String getAddress() {
         return address;
     }
